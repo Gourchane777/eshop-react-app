@@ -6,40 +6,56 @@ export default class ListProduct extends React.Component{
 
     constructor(props){
         super(props)
-    }
+   
     
-    state = {
+   this.state = {
         products:[
-            {
-                id:1,
-                title:"The North Face",
-                desc :"The weather and landscape dictate our adventures in the mountains",
-                img  :"https://images.thenorthface.com/is/image/TheNorthFaceEU/4956_KT0_hero?$638x745$" 
-            },
-            {
-                id:2,
-                title:"The North Face",
-                desc :"The weather and landscape dictate our adventures in the mountains",
-                img  :"https://images.thenorthface.com/is/image/TheNorthFaceEU/3XEO_JK3_hero?$638x745$" 
-            },
-            {
+            // {
+            //     id:1,
+            //     title:"The North Face",
+            //     desc :"The weather and landscape dictate our adventures in the mountains",
+            //     img  :"https://images.thenorthface.com/is/image/TheNorthFaceEU/4956_KT0_hero?$638x745$" 
+            // },
+            // {
+            //     id:2,
+            //     title:"The North Face",
+            //     desc :"The weather and landscape dictate our adventures in the mountains",
+            //     img  :"https://images.thenorthface.com/is/image/TheNorthFaceEU/3XEO_JK3_hero?$638x745$" 
+            // },
+            // {
                   
-                id:3,
-                title:"The North Face",
-                desc :"The weather and landscape dictate our adventures in the mountains",
-                img  :"https://images.thenorthface.com/is/image/TheNorthFaceEU/CYG9_JK3_hero?$638x745$" 
-            },
-            {
+            //     id:3,
+            //     title:"The North Face",
+            //     desc :"The weather and landscape dictate our adventures in the mountains",
+            //     img  :"https://images.thenorthface.com/is/image/TheNorthFaceEU/CYG9_JK3_hero?$638x745$" 
+            // },
+            // {
                  
-                id:4,
-                title:"The North Face",
-                desc :"The weather and landscape dictate our adventures in the mountains",
-                img  :"https://images.thenorthface.com/is/image/TheNorthFaceEU/A8AZ_JK3_hero?$638x745$" 
-            }
-        ]
+            //     id:4,
+            //     title:"The North Face",
+            //     desc :"The weather and landscape dictate our adventures in the mountains",
+            //     img  :"https://images.thenorthface.com/is/image/TheNorthFaceEU/A8AZ_JK3_hero?$638x745$" 
+            // }
+        ],
+
+       
     }
  
+  
+}
+    
    
+ componentDidMount(){
+
+    axios.get("products.json").then((getData) => {
+     
+        let fetchData = [];
+        Object.keys(getData.data).map( (key) => {
+            fetchData.push({...getData.data[key], id: key });
+        })
+        this.setState({products:fetchData})
+       })
+ }
     render(){
 
         return(
@@ -86,11 +102,7 @@ export default class ListProduct extends React.Component{
     }
    
 
-    // axios.get("products.json").then((getData) => {
-    //    // console.log(getData.data)  
-    //     let dt = getData.data
-    //     console.log(dt)
-    //   })
+    
 
 
      
