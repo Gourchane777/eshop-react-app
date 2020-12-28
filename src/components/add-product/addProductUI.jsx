@@ -1,7 +1,7 @@
 export default function AddProductUI (props) {
 
     return(
-        <div className="container mt-5">
+        <div className="col-4 mt-5">
 
         <form>
           <div className="mb-3">
@@ -40,11 +40,13 @@ export default function AddProductUI (props) {
                   className={props.errorImg == true ? 'text-danger d-block' : 'd-none'}> Image is required !</small>
         
         </div>
-        
+        <div className="text-center">
           <button 
                   type="submit" 
                   onClick={props.onAddProduct} 
-                  className="btn btn-success w-100 mt-3">Add </button>
+                  className="  btn btn-info  mt-3" style={{width : '100px'}}>Add <i className="fa fa-plus"></i>
+                   </button>
+                   </div>
         </form>
         
               </div>

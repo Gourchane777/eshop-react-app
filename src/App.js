@@ -8,7 +8,7 @@ function App() {
   return (
     <div >
       <Header />
-      <main className="container mt-5">
+      <main className="container-fluid d-flex align-items-center justify-content-center mt-5 ">
      <AddProduct />
      <ListProduct />
       </main>
