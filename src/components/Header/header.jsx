@@ -32,8 +32,8 @@ export default function Header (){
     <form className="form-inline my-2 my-lg-0">
       <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />
       <button className="btn btn-outline-success mr-2 my-2 my-sm-0 text-uppercase" type="submit">
-        <i className="fa fa-lock"></i> register</button> 
-      <button className="btn btn-outline-success my-2 my-sm-0 text-uppercase" type="submit"> <i className="fa fa-user" ></i> login</button>
+        <i className="fa fa-lock"></i> Sign Up</button> 
+      <button className="btn btn-outline-success my-2 my-sm-0 text-uppercase" type="submit"> <i className="fa fa-user" ></i>Sign In</button>
     </form>
   </div>
 </nav>
