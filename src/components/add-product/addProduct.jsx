@@ -4,18 +4,27 @@ import AddProductUI from './addProductUI';
 
 export default class AddProduct extends React.Component {
 
+
+
   constructor(props){
     super(props);
-  }
 
-  state = {
-    title      : ''    ,
-    desc       : ''    ,
-    img        : ''    ,
-    errorTitle : false ,
-    errorDesc  : false ,
-    errorImg   : false 
+    this.state = {
+      title      : ''    ,
+      desc       : ''    ,
+      img        : ''    ,
+      errorTitle : false ,
+      errorDesc  : false ,
+      errorImg   : false 
+    }
   }
+ 
+  
+
+  
+
+
+ 
    render(){
      return(
         
